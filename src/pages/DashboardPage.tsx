@@ -1,12 +1,9 @@
-import { useState } from 'react'
-import {
-  Zap, Search, Bell, LogOut,
-  Calendar, Wifi, ArrowUpDown, Infinity,
+import { 
+  Calendar, Wifi, ArrowUpDown, Infinity as InfinityIcon,
   Download, ChevronLeft, ChevronRight, Filter
 } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
-
-type NavTab = 'dashboard' | 'support'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const transactions = [
   { date: 'Oct 12, 2023', ref: 'RRG-INV-99231', amount: '₱1,499.00', status: 'PAID' },
@@ -17,67 +14,13 @@ const transactions = [
 ]
 
 export default function DashboardPage() {
-  const navigate = useNavigate()
-  const [activeTab, setActiveTab] = useState<NavTab>('dashboard')
-
   return (
     <div className="db-shell">
-
-      {/* ── Top Navigation ── */}
-      <header className="db-topnav">
-        <div className="db-topnav-left">
-          <div className="db-logo">
-            <div className="brand-logo-icon">
-              <Zap size={16} fill="white" color="white" />
-            </div>
-            <span>RRG Fiber</span>
-          </div>
-
-          <nav className="db-tabs">
-            {(['dashboard', 'support'] as NavTab[]).map(tab => (
-              <button
-                key={tab}
-                className={`db-tab ${activeTab === tab ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </nav>
-        </div>
-
-        <div className="db-topnav-right">
-          <div className="db-search">
-            <Search size={15} />
-            <input type="text" placeholder="Search resources…" />
-          </div>
-          <button className="db-icon-btn"><Bell size={19} /></button>
-          <div className="db-avatar">A</div>
-          <button className="db-icon-btn" onClick={() => navigate('/login')} title="Sign out">
-            <LogOut size={19} />
-          </button>
-        </div>
-      </header>
-
-      {/* ── Body ── */}
+      <Header />
       <main className="db-main">
-        {activeTab === 'dashboard' && <DashboardView />}
-        {activeTab === 'support'   && <SupportView />}
+        <DashboardView />
       </main>
-
-      {/* ── Footer ── */}
-      <footer className="db-footer">
-        <div className="db-footer-brand">
-          <Zap size={13} fill="currentColor" />
-          <span>RRG FIBER</span>
-          <span className="db-footer-copy">© 2023 RRG Infrastructure Inc.</span>
-        </div>
-        <div className="db-footer-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Support</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
@@ -117,7 +60,7 @@ function DashboardView() {
             </div>
             <div className="db-stat-divider" />
             <div className="db-stat-item">
-              <div className="db-stat-icon"><Infinity size={14} /></div>
+              <div className="db-stat-icon"><InfinityIcon size={14} /></div>
               <p className="db-stat-label">DATA LIMIT</p>
               <p className="db-stat-value">Unlimited</p>
             </div>
@@ -150,7 +93,6 @@ function DashboardView() {
       {/* ── Billing History ── */}
       <div className="bh-section-header">
         <h2 className="bh-section-title">Billing History</h2>
-        <button className="bh-btn-outline">Export CSV</button>
       </div>
 
       {/* Summary cards */}
@@ -220,17 +162,3 @@ function DashboardView() {
   )
 }
 
-/* ============================================================
-   SUPPORT VIEW (placeholder)
-   ============================================================ */
-function SupportView() {
-  return (
-    <>
-      <div className="db-greeting">NEED HELP?</div>
-      <h1 className="db-page-title">Support</h1>
-      <div className="db-card" style={{ background: 'white', padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
-        Support content coming soon.
-      </div>
-    </>
-  )
-}
