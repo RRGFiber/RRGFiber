@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 60px;
-  background: white;
-  border-bottom: 2px solid var(--border);
+  background: #FFFFFF;
+  border-bottom: 2px solid #E5E7EB;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -24,7 +24,7 @@
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: -0.01em;
-  color: var(--primary);
+  color: #00468B;
   white-space: nowrap;
   flex-shrink: 0;
   cursor: pointer;
@@ -33,7 +33,7 @@
 .db-logo .brand-logo-icon {
   width: 32px;
   height: 32px;
-  background: var(--primary);
+  background: #003366;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -52,12 +52,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--bg-main);
-  border: 1px solid var(--border);
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
   border-radius: 10px;
   padding: 7px 14px;
   width: 220px;
-  color: var(--text-muted);
+  color: #6B7280;
 }
 
 .db-search input {
@@ -67,17 +67,17 @@
   width: 100%;
   font-size: 0.875rem;
   font-family: inherit;
-  color: var(--text-main);
+  color: #1F2937;
 }
 
 .db-search input::placeholder {
-  color: var(--text-muted);
+  color: #6B7280;
 }
 
 .db-icon-btn {
   background: none;
   border: none;
-  color: var(--text-muted);
+  color: #6B7280;
   width: 36px;
   height: 36px;
   border-radius: 9px;
@@ -88,8 +88,8 @@
 }
 
 .db-icon-btn:hover {
-  background: var(--bg-main);
-  color: var(--primary);
+  background: #F3F4F6;
+  color: #00468B;
 }
 
 .db-avatar-container {
@@ -100,7 +100,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #003366, #0070C0);
+  background: #FFFFFF;
   color: white;
   display: flex;
   align-items: center;
@@ -115,8 +115,8 @@
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  background: white;
-  border: 1px solid var(--border);
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
   border-radius: 12px;
   padding: 8px 0;
   width: 200px;
@@ -145,29 +145,29 @@
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-main);
+  color: #1F2937;
   text-align: left;
   cursor: pointer;
   transition: background 0.15s;
 }
 
 .db-dropdown-item:hover {
-  background: var(--bg-main);
-  color: var(--primary);
+  background: #F3F4F6;
+  color: #00468B;
 }
 
 .db-dropdown-divider {
   height: 1px;
-  background: var(--border);
+  background: #E5E7EB;
   margin: 6px 0;
 }
 
 .db-dropdown-logout {
-  color: #EF4444;
+  color: #DC2626;
 }
 
 .db-dropdown-logout:hover {
-  background: #FEF2F2;
+  background: rgba(239, 68, 68, 0.1);
   color: #DC2626;
 }
 

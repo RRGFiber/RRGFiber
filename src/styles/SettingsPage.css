@@ -11,19 +11,19 @@
 .settings-title {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #003366;
+  color: #1F2937;
   margin: 0 0 8px 0;
   letter-spacing: -0.02em;
 }
 
 .settings-subtitle {
-  color: var(--text-muted);
+  color: #6B7280;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .settings-card {
-  background: white;
+  background: #FFFFFF;
   border-radius: 12px;
   padding: 32px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -40,12 +40,12 @@
 .settings-card-title {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #1F2937;
   margin: 0;
 }
 
 .settings-icon-blue {
-  color: #003366;
+  color: #1F2937;
 }
 
 .settings-icon-red {
@@ -68,7 +68,7 @@
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: #6B7280;
   margin-bottom: 8px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -77,21 +77,21 @@
 .settings-input {
   width: 100%;
   padding: 14px 16px;
-  background: #F4F6F8;
+  background: #F3F4F6;
   border: 1px solid transparent;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  color: var(--text-main);
+  color: #1F2937;
   transition: all 0.2s;
   box-sizing: border-box;
 }
 
 .settings-input:focus {
   outline: none;
-  background: white;
-  border-color: #003366;
-  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+  background: #FFFFFF;
+  border-color: #1F2937;
+  box-shadow: 0 0 0 3px rgba(232, 146, 10, 0.1);
 }
 
 .settings-btn-primary {
@@ -113,7 +113,7 @@
 
 /* Danger Zone */
 .settings-danger-box {
-  background: #FEF2F2;
+  background: rgba(239, 68, 68, 0.1);
   border-radius: 8px;
   padding: 20px 24px;
   display: flex;
@@ -123,7 +123,7 @@
 
 .settings-danger-info h4 {
   margin: 0 0 4px 0;
-  color: var(--text-main);
+  color: #1F2937;
   font-size: 0.9375rem;
   font-weight: 700;
 }
@@ -131,14 +131,14 @@
 .settings-danger-info p {
   margin: 0;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: #6B7280;
 }
 
 .settings-btn-danger-outline {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: white;
+  background: transparent;
   color: #DC2626;
   border: 1px solid #FECACA;
   border-radius: 8px;
@@ -151,8 +151,8 @@
 }
 
 .settings-btn-danger-outline:hover {
-  background: #FEF2F2;
-  border-color: #F87171;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #DC2626;
 }
 
 @media (max-width: 768px) {
